@@ -10,7 +10,7 @@
 // eslint-disable
 import BouncingImage from './BoucingImage.vue'
 export default {
-  name: 'raccoonLoader',
+  name: 'loader',
   components: {
     BouncingImage,
   },

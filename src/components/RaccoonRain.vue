@@ -1,7 +1,10 @@
 <template>
 <div>
 <raccoon-droplet
-          v-for="n in 400"/>
+          v-bind:key="n"
+          :index="n"
+          v-for="n in 400"
+          />
 </div>
     
 </template>
