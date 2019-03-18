@@ -2,7 +2,6 @@
   <div v-bind:style="styleObject" class="droplet">
     <img src="https://www.pngrepo.com/download/191426/raccoon.png"/>
   </div>
-  <!-- <div>CIAO</div> -->
 </template>
 <script>
 export default {
@@ -27,8 +26,7 @@ export default {
   computed: {
     styleObject: function(){
       return{
-        top: this.x+"px",
-            // top: y+"px",
+          top: this.x+"px",
           left: this.y+"px",
           opacity: 1,
           animation: `rain ${this.duration}s forwards`,
@@ -37,14 +35,6 @@ export default {
      }
   },
   methods: {
-    // getInnerHeight(){
-    //   console.log("innerheight")
-    //   this.innerHeight = window.innerHeight;
-    // },
-    // getInnerWidth(){
-    //   console.log("innerwidth")
-    //   this.innerWidth = window.innerWidth;
-    // },
     getRandomIntInclusive: function(min, max) {
       console.log("random")
           min = Math.ceil(min);
@@ -69,14 +59,12 @@ export default {
           this.y = this.getRandomWidth() ,
           this.delay =  this.getRandomDelay(),
           this.duration =  this.getRandomDuration()
-
         // ])
         // .then(res => {
         //   console.log('logghe', res)
         //   [this.x, this.y, this.delay, this.duration] = res;
         // });
         console.log(`ciao`, this.x, this.y, this.delay, this.duration);       
-
     }
   }
 }

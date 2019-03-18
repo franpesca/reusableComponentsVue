@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
       <!-- <raccoon-loader v-bind:random="random"/>   -->
- <raccoon-rain/>
+  <raccoon-rain/>
     <!-- <bouncing-image imgurl="https://stickeroid.com/uploads/pic/fx0n217l-full/thumb/stickeroid_5bf54fc73c5ad.png"/> -->
   </div>
   <!-- <toggle imgurl="http://cdn.onlinewebfonts.com/svg/img_358086.png"/> -->
