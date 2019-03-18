@@ -1,5 +1,3 @@
-
-
 <template>
   <div>
     <bouncing-image :imgurl="url" />
@@ -7,7 +5,6 @@
 
 </template>
 <script>
-// eslint-disable
 import BouncingImage from './BoucingImage.vue'
 export default {
   name: 'loader',
@@ -26,7 +23,7 @@ export default {
       // pick a random image from an array
       // set url as the random image 
 
-      const raccoonList = ["https://img.lovepik.com/element/40061/6842.png_860.png", "https://www.clipartmax.com/png/middle/2-24441_cute-raccoon-png-hd-transparent-cute-raccoon-hd-raccoon-clip-art.png","https://www.pngrepo.com/download/191011/raccoon.png","https://www.clipartmax.com/png/middle/133-1333497_raccoon-cartoon-animal-images-cute-baby-raccoon-drawing.png","https://c7.uihere.com/files/121/638/460/raccoon-rat-euclidean-vector-illustration-raccoon-vector.jpg"]
+      const raccoonList = ["https://img.lovepik.com/element/40061/6842.png_860.png", "https://www.clipartmax.com/png/middle/2-24441_cute-raccoon-png-hd-transparent-cute-raccoon-hd-raccoon-clip-art.png","https://banner2.kisspng.com/20171220/zww/raccoon-png-5a3ae8b55c0504.26825113151381010137694998.jpg","https://www.clipartmax.com/png/middle/133-1333497_raccoon-cartoon-animal-images-cute-baby-raccoon-drawing.png","https://c7.uihere.com/files/121/638/460/raccoon-rat-euclidean-vector-illustration-raccoon-vector.jpg"]
 
     function getRandomIntInclusive(min, max) {
       min = Math.ceil(min);
@@ -48,4 +45,3 @@ export default {
 <style>
 
 </style>
-
