@@ -1,7 +1,7 @@
 <template>
   <div class="ball-wrapper">
-         <img :src="imgurl" class="bounce"> 
-  <div class="shadow"></div>
+        <img :src="imgurl" class="bounce"> 
+        <div class="shadow"></div>
   </div>
 </template>
 
@@ -14,7 +14,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   img{
     max-width: 50px;

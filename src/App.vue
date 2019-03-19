@@ -1,27 +1,19 @@
 <template>
   <div class="wrapper">
-      <!-- <raccoon-loader v-bind:random="random"/>   -->
-  <raccoon-rain/>
+    <router-link to="/raccoonRain">enable RaccoonRain</router-link>
+    <router-link to="/raccoonLoader">enable RaccoonLoader</router-link>
+    <router-view></router-view>
     <!-- <bouncing-image imgurl="https://stickeroid.com/uploads/pic/fx0n217l-full/thumb/stickeroid_5bf54fc73c5ad.png"/> -->
   </div>
-  <!-- <toggle imgurl="http://cdn.onlinewebfonts.com/svg/img_358086.png"/> -->
 </template>
 
 <script>
 // import BouncingImage from './components/BoucingImage.vue'
-import RaccoonLoader from './components/RaccoonLoader.vue'
-import RaccoonRain from './components/RaccoonRain.vue'
-
 export default {
   name: 'app',
-  components: {
-    // BouncingImage,
-    RaccoonLoader,
-    RaccoonRain
-  },
   data:()=>{
     return {
-      random: true
+      random: true,
     }
   },
 }
@@ -31,7 +23,23 @@ export default {
 
 .wrapper {
   padding: 50px;
-  /* display: flex; */
+  animation: backgroundFading 3s linear infinite;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+
+@keyframes backgroundFading {
+  10%{
+    backgorund: rgb(217, 170, 0);
+  }
+  50%{
+    background: rgb(255, 242, 0);;
+  }
+  100%{
+    background: rgb(229, 97, 187);
+  }
 }
 
 </style>

@@ -2,12 +2,11 @@
   <div>
     <bouncing-image :imgurl="url" />
   </div>
-
 </template>
 <script>
 import BouncingImage from './BoucingImage.vue'
 export default {
-  name: 'loader',
+  name: 'RaccoonLoader',
   components: {
     BouncingImage,
   },
@@ -15,31 +14,31 @@ export default {
     random: Boolean,
   },
   data: function() {
-    let url
-
-    console.log(this.random)
-    if (this.random) {
-
-      // pick a random image from an array
-      // set url as the random image 
-
-      const raccoonList = ["https://img.lovepik.com/element/40061/6842.png_860.png", "https://www.clipartmax.com/png/middle/2-24441_cute-raccoon-png-hd-transparent-cute-raccoon-hd-raccoon-clip-art.png","https://banner2.kisspng.com/20171220/zww/raccoon-png-5a3ae8b55c0504.26825113151381010137694998.jpg","https://www.clipartmax.com/png/middle/133-1333497_raccoon-cartoon-animal-images-cute-baby-raccoon-drawing.png","https://c7.uihere.com/files/121/638/460/raccoon-rat-euclidean-vector-illustration-raccoon-vector.jpg"]
-
-    function getRandomIntInclusive(min, max) {
+    return {
+      url: "",
+      randomNumber: "",
+      raccoonList:["https://img.lovepik.com/element/40061/6842.png_860.png", "https://www.clipartmax.com/png/middle/2-24441_cute-raccoon-png-hd-transparent-cute-raccoon-hd-raccoon-clip-art.png","http://pngimg.com/uploads/raccoon/raccoon_PNG16976.png","http://pngimg.com/uploads/raccoon/raccoon_PNG16966.png","http://pngimg.com/uploads/raccoon/raccoon_PNG16975.png","http://www.stickpng.com/assets/thumbs/580b57fbd9996e24bc43bcb0.png"],
+    }
+  },
+  mounted: function() {
+    this.setRandomNumber()
+  },
+  methods: {
+    getRandomIntInclusive: function(min, max) {
       min = Math.ceil(min);
       max = Math.floor(max);
       return Math.floor(Math.random() * (max - min + 1)) + min; //Il max è incluso e il min è incluso 
-    } 
-      var randomNumber = getRandomIntInclusive(0, raccoonList.length) 
-      url=raccoonList[randomNumber]
-    }  else {
-      url = "https://www.pngrepo.com/download/191426/raccoon.png"
+    } ,
+    setRandomNumber() {
+       this.randomNumber = this.getRandomIntInclusive(0, this.raccoonList.length) 
+       if (this.random) {
+          this.url=this.raccoonList[this.randomNumber]
+       } else {
+         this.url="https://www.pngrepo.com/download/191426/raccoon.png"
+       }
+       return
     }
-
-    return {
-      url: url
-    }
-  }
+}
   }
 </script>
 <style>
